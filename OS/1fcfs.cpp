@@ -22,7 +22,7 @@ void findTurnAroundTime( int processes[], int n, int bt[], int wt[], int tat[])
 }
 
 //Function to calculate average time
-void findavgTime( int processes[], int n, int bt[])
+void findAvgTime( int processes[], int n, int bt[])
 {
   int wt[n], tat[n], total_wt = 0, total_tat = 0;
 
@@ -66,7 +66,7 @@ int main()
     cin >> burst_time[i];
   }
 
-  findavgTime(processes, n,  burst_time);
+  findAvgTime(processes, n,  burst_time);
   return 0;
 }
 

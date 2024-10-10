@@ -13,17 +13,18 @@ int main()
     scanf("%d", &arr[i]);
   }
 
-  int midItem;
-  printf("Enter the item you want to insert in the mid of the array: ");
-  scanf("%d", &midItem);
-
   int midIndex = (arraySize-1)/2;
-  arr[midIndex] = midItem;
 
-  printf("Array after inserting the element at mid: ");
-  for(int i = 0; i < arraySize; i++)
+  for(int i = midIndex; i < arraySize; i++)
+  {
+    arr[i] = arr[i+1];
+  }
+
+  printf("Array after deleting the mid element: ");
+  for(int i = 0; i < arraySize-1; i++)
   {
     printf("%d ", arr[i]);
   }
+  
   return 0;
 }

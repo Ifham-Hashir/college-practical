@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 // Function to calculate the median
-float calculate_median(int n, float lower[], float upper[], int freq[]) {
+float calc_median(int n, float lower[], float upper[], int freq[]) {
     int total_freq = 0;
     int cumu_freq[n];
 
@@ -24,13 +24,13 @@ float calculate_median(int n, float lower[], float upper[], int freq[]) {
     }
 
     // Calculate necessary values for the formula
-    float L = lower[median_class];               // Lower limit of median class
-    int F = (median_class == 0) ? 0 : cumu_freq[median_class - 1]; // Cumulative frequency before median class
+    float l = lower[median_class];               // Lower limit of median class
+    int c = (median_class == 0) ? 0 : cumu_freq[median_class - 1]; // Cumulative frequency before median class
     int f = freq[median_class];                  // Frequency of median class
     float h = upper[median_class] - lower[median_class]; // Class width
 
     // Apply the median formula
-    return L + ((half_total - F) / (float)f) * h;
+    return l + ((half_total - c) / (float)f) * h;
 }
 
 int main() {
@@ -62,7 +62,7 @@ int main() {
     }
 
     // Calculate the median
-    float median = calculate_median(n, lower, upper, freq);
+    float median = calc_median(n, lower, upper, freq);
 
     // Display the result
     printf("The median is: %.2f\n", median);

@@ -1,4 +1,5 @@
-// C++ program for implementation of FCFS scheduling
+// Write a program to demonstrate the use of FCFS CPU Scheduling algorithm.
+
 #include<iostream>
 using namespace std;
 
@@ -40,8 +41,7 @@ void findAvgTime( int processes[], int n, int bt[])
   {
     total_wt = total_wt + wt[i];
     total_tat = total_tat + tat[i];
-    cout << "   " << i+1 << "\t\t" << bt[i] <<"\t    "
-    << wt[i] <<"\t\t  " << tat[i] <<endl;
+    cout << "   " << i+1 << "\t\t" << bt[i] <<"\t    "<< wt[i] <<"\t\t  " << tat[i] <<endl;
   }
 
     cout << "Average waiting time = " << (float)total_wt / (float)n;
@@ -70,3 +70,14 @@ int main()
   return 0;
 }
 
+// Output
+// Enter the number of processes: 3
+// Enter burst time for process 1:10
+// Enter burst time for process 2:5
+// Enter burst time for process 3:8
+// Processes   Burst time   Waiting time   Turn around time
+//    1            10          0             10
+//    2            5           10            15
+//    3            8           15            23
+// Average waiting time = 8.33333
+// Average turn around time = 16

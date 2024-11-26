@@ -48,17 +48,32 @@ int main() {
 
 	avg_wt = (float)total / n;
 	total = 0;
-	cout << "P	 BT	 WT	 TAT" << endl;
+	cout << "Processes	 Burst time	 Waiting time	 Turn around time" << endl;
 
 	// Calculation of Turn Around Time and printing the
 	// data.
 	for (i = 0; i < n; i++) {
 		A[i][3] = A[i][1] + A[i][2];
 		total += A[i][3];
-		cout << "P" << A[i][0] << "	 " << A[i][1] << "	 " << A[i][2] << "	 " << A[i][3] << endl;
+		cout << "   " << A[i][0] << "\t\t    " << A[i][1] <<"\t\t    "<<A[i][2] <<"\t\t    " << A[i][3] <<endl;
+		//cout << "P" << A[i][0] << "	 " << A[i][1] << "	 " << A[i][2] << "	 " << A[i][3] << endl;
 	}
 
 	avg_tat = (float)total / n;
 	cout << "Average Waiting Time= " << avg_wt << endl;
 	cout << "Average Turnaround Time= " << avg_tat << endl;
 }
+
+
+// Output:
+// Enter number of process: 3
+// Enter Burst Time:
+// P1: 10
+// P2: 5
+// P3: 8
+// Processes        Burst time      Waiting time    Turn around time
+//    2                5               0               5
+//    3                8               5               13
+//    1                10              13              23
+// Average Waiting Time= 6
+// Average Turnaround Time= 13.6667

@@ -57,3 +57,27 @@ int main()
     cout<<"\nAverage Turnaround Time="<<avg_tat;
     return 0;
 }
+
+// Output
+// Enter Total Number of Process:3
+// Enter Burst Time and Priority
+
+// P[1]
+// Burst Time:10
+// Priority:0
+
+// P[2]
+// Burst Time:5
+// Priority:2
+
+// P[3]
+// Burst Time:8
+// Priority:1
+
+// Process     Burst Time          Waiting Time    Turnaround Time
+// P[1]              10                0                   10
+// P[3]              8                 10                  18
+// P[2]              5                 18                  23
+
+// Average Waiting Time=9
+// Average Turnaround Time=17

@@ -34,7 +34,7 @@ int main() {
     printf("Enter elements of the first matrix:\n");
     for (int i = 0; i < rows; i++) {
         for (int j = 0; j < cols; j++) {
-          scanf("%d", &mat1[i][j]);
+            scanf("%d", &mat1[i][j]);
         }
     }
 
@@ -42,7 +42,7 @@ int main() {
     printf("Enter elements of the second matrix:\n");
     for (int i = 0; i < rows; i++) {
         for (int j = 0; j < cols; j++) {
-          scanf("%d", &mat2[i][j]);
+            scanf("%d", &mat2[i][j]);
         }
     }
 

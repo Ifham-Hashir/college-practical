@@ -36,7 +36,7 @@ int main() {
 
     printf("Enter the frequencies: ");
     for (int i = 0; i < n; i++) {
-      scanf("%d", &frequencies[i]);
+        scanf("%d", &frequencies[i]);
     }
 
     // Find and display the mode

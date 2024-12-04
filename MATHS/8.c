@@ -57,13 +57,6 @@ int main() {
     for (int i = 0; i < n; i++) {
       scanf("%f", &frequencies[i]);
     }
-
-        // printf("Upper bound of class %d: ", i + 1);
-        // scanf("%f", &upperBounds[i]);
-        // printf("Frequency of class %d: ", i + 1);
-        // scanf("%f", &frequencies[i]);
-
-
     // Calculate and display the mode
     findMode(lowerBounds, upperBounds, frequencies, n);
 

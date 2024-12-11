@@ -104,24 +104,6 @@ int main() {
 // Choose the memory management technique:
 // 1. Paging
 // 2. Segmentation
-// Enter choice: 2
-// Enter the number of segments: 3
-
-// Enter the base addresses for each segment:
-// Enter the base address for segment 0: 1000
-// Enter the base address for segment 1: 2000
-// Enter the base address for segment 2: 3000
-
-// Segment Table:
-// Segment No.     Base Address
-// 0               1000
-// 1               2000
-// 2               3000
-
-// Enter the logical address: 2500
-// Segment Number: 2, Offset: 500
-// Base Address: 3000, Physical Address: 3500
-
 // Output2:
 // Enter choice: 1
 // Enter the number of pages: 4

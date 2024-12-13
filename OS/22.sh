@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Prompt the user for the number of prime numbers to display
-echo "Enter the number of prime numbers to display:"
-read n
+# Prompt the user for input
+echo "Enter a number:"
+read b
 
 # Function to check if a number is prime
 is_prime() {
@@ -19,24 +19,19 @@ is_prime() {
     return 0 # Prime
 }
 
-# Generate the first n prime numbers
-count=0
-current=2
-echo "The first $n prime numbers are:"
-while [ $count -lt $n ]
+# Display prime numbers up to b
+echo "Prime numbers up to $b are:"
+for ((num=2; num<=b; num++))
 do
-    if is_prime $current; then
-        echo $current
-        ((count++))
+    if is_prime $num; then
+        echo "$num"
     fi
-    ((current++))
 done
 
-# Enter the number of prime numbers to display:
-# 5
-# The first 5 prime numbers are:
-# 2
-# 3
-# 5
-# 7
-# 11
+Enter a number:
+10
+Prime numbers up to 10 are:
+2
+3
+5
+7

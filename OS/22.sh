@@ -28,10 +28,10 @@ do
     fi
 done
 
-Enter a number:
-10
-Prime numbers up to 10 are:
-2
-3
-5
-7
+# Enter a number:
+# 10
+# Prime numbers up to 10 are:
+# 2
+# 3
+# 5
+# 7
